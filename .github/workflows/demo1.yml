@@ -1,10 +1,12 @@
 name: Events Demo 1
 on:
   pull_request:
+    # we can use activity types to control an event
     types:
       - opened
   workflow_dispatch:
   push:
+    # we can also use event filters to control the events
     branches:
       - main # main
       - 'dev-*' # Any character - examples: dev-new, dev-this-is-new
